@@ -1,6 +1,5 @@
 const ReadOnlyRow = ({ client, handleEditClick, handleDeleteClick }) => {
   return (
-
     <>
     <tr key={client.orderNo}>
       <td>{client.orderNo}</td>

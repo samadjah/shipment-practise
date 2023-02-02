@@ -10,7 +10,7 @@ const EditableRow = ({client, editFormData, handleEditFormChange, handleCancelCl
       <td></td>
       <td></td>
 
-          <td className='editable'>
+        <td className='editable'>
         <label className='form-label' htmlFor="orderNo">Order No</label>
         <input
           className="form-control"

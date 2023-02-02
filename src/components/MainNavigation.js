@@ -11,7 +11,10 @@ function MainNavigation() {
             <NavLink to="/" className={({isActive})=> isActive ? classes.active : undefined}end>Basic Table</NavLink>
           </li>
           <li>
-            <NavLink to="/ajax" className={({isActive})=> isActive ? classes.active : undefined}>Table Ajax</NavLink>
+            <NavLink to="/axios" className={({isActive})=> isActive ? classes.active : undefined}>Table Axios</NavLink>
+          </li>
+          <li>
+            <NavLink to="/reacttable" className={({isActive})=> isActive ? classes.active : undefined}>ReactTable</NavLink>
           </li>
         </ul>
       </nav>

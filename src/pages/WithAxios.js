@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import Table from "../components/TableAjax";
+import Table from "../components/TableAxios";
 
 
-function WithAjax() {
+function WithAxios() {
   return (
     <>
-    <h1>Ajax table Page</h1>
+    <h1>Axios table Page</h1>
     <p>
     go to <Link to="/"> Simple table page</Link>.
       </p>
@@ -17,4 +17,4 @@ function WithAjax() {
   );
 }
 
-export default WithAjax;
+export default WithAxios;

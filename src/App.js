@@ -2,9 +2,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import BasicTable from './pages/BasicTable';
 import RootLayout from './pages/Root';
-import WithAjax from './pages/WithAjax';
-import AjaxRootLayout from './pages/AjaxRoots';
+import WithAxios from './pages/WithAxios';
+import AxiosRootLayout from './pages/AxiosRoots';
 import NewCustomerPage from './pages/NewCustomerPage';
+import WithReactTable from './pages/WithReactTable';
+import ReactRootLayout from './pages/ReactTableRoots';
+
 
 
 
@@ -21,13 +24,23 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <BasicTable /> },
       {
-        path: 'ajax',
-        element: <AjaxRootLayout />,
+        path: 'axios',
+        element: <AxiosRootLayout />,
         children: [
           {
-            index: true, element: <WithAjax />,
+            index: true, element: <WithAxios />,
           },
           { path: 'new', element:<NewCustomerPage/> },
+
+        ],
+      },
+      {
+        path: 'reacttable',
+        element: <ReactRootLayout />,
+        children: [
+          {
+            index: true, element: <WithReactTable />,
+          },
 
         ],
       },

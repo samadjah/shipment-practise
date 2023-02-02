@@ -158,9 +158,7 @@ return (
 
 
           <tr>
-
-            <td>
-              
+            <td>              
       <label className='form-label' htmlFor="orderNo">Order No</label>
               <input
                 className="form-control"

@@ -4,8 +4,7 @@ import EditableRow from './EditableRow';
 
 
 
-const EditShipment = () => {
-  
+const EditShipment = () => {  
 
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState();
@@ -64,7 +63,6 @@ const handleEditFormeSubmit = (event) => {
 
   setClients(newClients);
   setEditClientOrderNo(null);
-
 };
 
 const handleEditClick = (event, client) => {
@@ -93,7 +91,6 @@ const index = clients.findIndex((client) => client.orderNo === clientOrderNo);
 
 newClients.splice(index, 1);
 setClients(newClients);
-
 }; 
   
   
@@ -119,9 +116,7 @@ setClients(newClients);
                   <EditableRow editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick} />
-                ) : (
-                    
-          
+                ) : (          
                   <tr key={client.orderNo}>
                     <td>{client.orderNo}</td>
                     <td>{client.date}</td>
@@ -129,9 +124,8 @@ setClients(newClients);
                     <td>{client.trackingNo}</td>
                     <td>{client.status}</td>
                     <td>{client.consignee}</td>
-
                     <td><button className="btn btn-outline-info" type='button' onClick={(event) => handleEditClick(event, client)}>Edit</button></td>
-                    <td><button className="btn btn-danger" type='button' onClick={() => handleDeleteClick(client.orderNo)}>Delete</button></td>    </tr>
+                    <td><button className="btn btn-danger" type='button' onClick={() => handleDeleteClick(client.orderNo)}>Delete</button></td></tr>
                 )}
           </>
         ))}
